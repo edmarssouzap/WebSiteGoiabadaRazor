@@ -1,0 +1,37 @@
+﻿@page
+@model PaginaGoiabada.Pages.Fornecedores.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Fornecedor</h1>
+
+<div>
+    <h4>Detalhes</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Fornecedor.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fornecedor.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Fornecedor.Cnpj)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fornecedor.Cnpj)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Fornecedor.Endereco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fornecedor.Endereco.ID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Fornecedor.ID">Editar</a> |
+    <a asp-page="./Index">Voltar para a lista</a>
+</div>

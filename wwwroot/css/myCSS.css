@@ -1,0 +1,23 @@
+﻿* {
+    margin:0;
+    padding: 0;
+}
+
+header {
+    background-color: darkred;
+}
+
+header span {
+    color: white;
+}
+
+
+div > a > span {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+a > span:hover {
+    color: green;
+    font-weight: bold;
+}

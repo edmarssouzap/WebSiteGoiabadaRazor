@@ -1,0 +1,107 @@
+﻿/* FORMATACAO DO RODAPE */
+
+footer {
+    bottom: 0;
+}
+
+/* Alinhando itens do rodape ao centro */
+/* ------------------------------------- */
+.menuRedesSociais,
+.cartoes,
+.copyright h6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nomeMenu,
+.menuRedesSociais,
+.horarioFuncionamento {
+    text-align: center;
+}
+
+/* -------------------------------------- */
+
+* {
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.menuInferiorPrincipal {
+    display: flexbox;
+    justify-content: space-around;
+    background-color: darkred;
+    width: 100%;
+}
+
+.menuInferiorPrincipal p,
+.menuRedesSociais p,
+.horarioFuncionamento p {
+    color: gray;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.nomeMenu {
+    padding-top: 10px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.menuInferiorPrincipal p:hover {
+    /* background-color: #3b3737; */
+    color: green;
+    font-weight: bold;
+}
+
+/* Menu com as imagens das redes sociais */
+.menuRedesSociais img {
+    /* top left bottom right */
+    margin: 5px 20px 5px 30px;
+}
+
+.menuRedesSociais img:hover {
+    background-color: green;
+    border-radius: 10px;
+    /* background-color: #3b3737; */
+}
+
+.horarioFuncionamento span {
+    padding: 5px;
+    text-transform: uppercase;
+    color: gray;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.cartoes {
+    background-color: darkred;
+    height: 80px;
+}
+
+.cartoes img {
+    width: 65px;
+    height: 40px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+/* FORMATACAO PARA O COPYRIGHT DO RODAPE */
+.copyright {
+    /* background-color: wheat; */
+    background-color: white;
+    height: 30px;
+    width: 100%;
+
+}
+
+.copyright h6 {
+    height: 35px;
+    width: 100%;
+    margin: auto;
+    color: black;
+}

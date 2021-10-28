@@ -1,0 +1,3 @@
+Este projeto foi criado para que pudesse estudar o funcionamento do ASP.NET, Razor e SQL Server usando o C#, portanto as imagens presente nesse projeto é de uso e autoria dos responsaveis pelo link abaixo e o autor desse projeto não teve e nem tem qualquer ligação com a outra do site ou com os materiais presente nele:
+
+http://www.goiabadazelia.com.br/

@@ -1,0 +1,62 @@
+﻿@page
+@model PaginaGoiabada.Pages.Clientes.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Cliente</h1>
+
+<h4>Criar</h4>
+<hr />
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-6">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Cliente.Nome" class="control-label"></label>
+                <input asp-for="Cliente.Nome" class="form-control" />
+                <span asp-validation-for="Cliente.Nome" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Cliente.Telefone" class="control-label"></label>
+                <input asp-for="Cliente.Telefone" class="form-control" />
+                <span asp-validation-for="Cliente.Telefone" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Cliente.Email" class="control-label"></label>
+                <input asp-for="Cliente.Email" class="form-control" />
+                <span asp-validation-for="Cliente.Email" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Cliente.EnderecoID" class="control-label"></label>
+                <select asp-for="Cliente.EnderecoID" class="form-control" asp-items="ViewBag.EnderecoID"></select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-page="Index">Voltar para a lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

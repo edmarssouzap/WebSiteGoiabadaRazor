@@ -1,0 +1,57 @@
+﻿@page
+@model PaginaGoiabada.Pages.Fornecedores.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Fornecedor</h1>
+
+<h4>Editar</h4>
+<hr />
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-6">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Fornecedor.ID" />
+            <div class="form-group">
+                <label asp-for="Fornecedor.Nome" class="control-label"></label>
+                <input asp-for="Fornecedor.Nome" class="form-control" />
+                <span asp-validation-for="Fornecedor.Nome" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Fornecedor.Cnpj" class="control-label"></label>
+                <input asp-for="Fornecedor.Cnpj" class="form-control" />
+                <span asp-validation-for="Fornecedor.Cnpj" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Fornecedor.EnderecoID" class="control-label"></label>
+                <select asp-for="Fornecedor.EnderecoID" class="form-control" asp-items="ViewBag.EnderecoID"></select>
+                <span asp-validation-for="Fornecedor.EnderecoID" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+
+<div>
+    <a asp-page="./Index">Voltar para a lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

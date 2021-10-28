@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PaginaGoiabada</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/myCSS.css" />
+    <link rel="stylesheet" href="~/css/myFooter.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-lightborder-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index"><span>Goiabada</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index"><span>Home</span></a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Clientes/Index"><span>Clientes</span></a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Produtos/Index"><span>Produtos</span></a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Fornecedores/Index"><span>Fornecedores</span></a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Enderecos/Index"><span>Endereços</span></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top text-muted">
+    
+        <!-- Menu Inferior do rodape -->
+        <div class="menuInferiorPrincipal">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="menu">
+                        <ul>
+                            <h6 class="nomeMenu">Menu</h6>
+
+                            <li>
+                                <a href="/Index">
+                                    <p class="h6">Home</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Clientes">
+                                    <p class="h6">Clientes</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Fornecedores">
+                                    <p class="h6">Fornecedores</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Produtos">
+                                    <p class="h6">Produtos</p>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Enderecos">
+                                    <p class="h6">Endereços</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="horarioFuncionamento">
+
+                        <ul>
+                            <h6 class="nomeMenu">Horário de Funcionamento</h6>
+                            <li>
+                                <span>Seg. a Sex. das 08h às 18h.</span>
+                            </li>
+                            <li>
+                                <span>Sábado das 08h às 12h.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h6 class="nomeMenu">Redes Sociais</h6>
+                    <div class="menuRedesSociais">
+
+                        <a href="https://www.facebook.com/">
+                            <img src="/imagens/icon/facebook.png" alt="" />
+                        </a>
+
+                        <a href="https://api.whatsapp.com/send?phone=5511922222222">
+                            <img src="/imagens/icon/whatsapp.png" alt="" />
+                        </a>
+
+                        <a href="https://www.instagram.com/">
+                            <img src="/imagens/icon/instagram.png" alt="" />
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cartoes">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <img src="/imagens/pagamento/visa.png" alt="">
+                    <img src="/imagens/pagamento/mastercard.png" alt="">
+                    <img src="/imagens/pagamento/elo.png" alt="">
+                    <img src="/imagens/pagamento/dinnersclub.png" alt="">
+                    <img src="/imagens/pagamento/hipercard.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-12">
+                    <h6>&copy;2021 - Goiabada LTDA. | All right reserved.</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
